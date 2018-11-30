@@ -164,141 +164,31 @@ query MyProduct {
     
   </section>
 <!-- TODO ZAC: Rework benefits to what you think work best -->
-        <section>
-          <h2>Every field Is a Function</h2>
-
-          <pre style="float: left; width: 50%"><code data-trim contenteditable class="javascript">
-query MyProduct {
-  products {
-    picture(size: 300) {
-      width, height, url
-    }
-  }
-}
-          </code></pre>
-
-          <pre style="float: left; width: 50%" class="fragment fade-in" data-fragment-index="1"><code data-trim contenteditable class="javascript">
-{
-  "data": {
-    "products": [
-      {
-        "picture": {
-          "width": 300,
-          "height": 300,
-          "url": "http://..."
-        }
-      },
-      ...
-    ]
-  }
-}
-          </code></pre>
-        </section>
 
         <section>
-          <h2>Aliases</h2>
+          <h2>Benefits</h2>
 
-          <pre style="float: left; width: 50%"><code data-trim contenteditable class="javascript">
-query MyProduct {
-  products {
-    thumb: picture(size: 100) {
-      width
-    }
-    fullSize: picture(size: 500) {
-      width
-    }
-  }
-}
-          </code></pre>
+          <ul>
+            <li>Prevents Over/Under Fetching</li>
+            <li>Easy to Understand Structure</li>
+            <li>Can Be Used With Multiple Platforms</li>
+          </ul>
 
-          <pre style="float: left; width: 50%" class="fragment fade-in" data-fragment-index="1"><code data-trim contenteditable class="javascript">
-{
-  "data": {
-    "products": [
-      {
-        "thumb": {
-          "width": 100
-        },
-        "fullSize": {
-          "width": 500
-        }
-      },
-      ...
-    ]
-  }
-}
-          </code></pre>
-        </section>
 
-        <section>
-          <img src="assets/img/data-requirements.svg">
-        </section>
-
-        <section>
-          <h2>Type System</h2>
-
-          <pre style="float: left; width: 60%"><code data-trim contenteditable class="javascript">
-type Picture {
-  width: Int!
-  height: Int!
-  url: String
-}
-          </code></pre>
-
-          <pre style="float: left; width: 40%" class="fragment fade-in" data-fragment-index="3"><code data-trim contenteditable class="javascript">
-type Query {
-  product(id: Int!): Product
-  products: [Product]
-}
-          </code></pre>
-
-          <pre style="float: left; width: 60%" class="fragment fade-in" data-fragment-index="1"><code data-trim contenteditable class="javascript">
-interface Identifiable {
-  id: String!
-}
-          </code></pre>
-
-          <pre style="float: left; width: 60%" class="fragment fade-in" data-fragment-index="2"><code data-trim contenteditable class="javascript">
-type Product implements Identifiable {
-  id: String!
-  name: String!
-  description: String
-  picture(size: Int): Picture
-}
-          </code></pre>
-        </section>
-
-        <section>
-          <h2>Mutations & Subscriptions</h2>
-
-          <pre><code data-trim contenteditable class="javascript">
-mutation ChangeStaff {
-  changeName(productId: 123, newName: "Cheesecake") {
-    id, version
-  }
-
-  setDescription(productId: 123, description: "Delicious!") {
-    id, version
-  }
-}
-
-subscription ProductEvents {
-  nameChanged(productId: 123) { name }
-  productDeleted { id }
-}
-          </code></pre>
         </section>
         <section>
-            <h2>Use Cases and Products</h2>
-  
-            <!-- TODO ZAC: Add Icons of products -->
-          </section>
-        <section>
-          <h2>Demo Time</h2>
+          <h2>Platforms</h2>
+
+          <div class="logos">
+
+            <div class="platform-logo"><a href="https://github.com/graphql/graphql-js/"><img src="assets/img/contentful-logo.png"></a></div>
+            <div class="platform-logo"><a href="https://github.com/graphql/graphql-js/"><img src="assets/img/shopify.png"></a></div>
+            <div class="platform-logo"><a href="https://github.com/graphql/graphql-js/"><img src="assets/img/spotify-logo.png"></a></div>
+            <div class="platform-logo"><a href="https://github.com/graphql/graphql-js/"><img src="assets/img/pokemon-logo.png"></a></div>
+    
+          </div>
+
         </section>
-
-        
-
         <section>
           <h2>Languages</h2>
 
@@ -318,9 +208,19 @@ subscription ProductEvents {
             <div class="impl-logo fade-in" data-fragment-index="6"><a href="https://github.com/webonyx/graphql-php"><img src="assets/img/php_logo.png"></a></div>
             <div class="impl-logo fade-in" data-fragment-index="6"><a href="https://github.com/graphql/libgraphqlparser"><img src="assets/img/c-logo.svg"></a></div>
             <div class="impl-logo fade-in" data-fragment-index="6"><a href="https://github.com/graphql-dotnet/graphql-dotnet"><img src="assets/img/csharp-logo.png"></a></div>
+            
           </div>
 
         </section>
+
+        <section>
+          <h2>Demo Time</h2>
+          <p>Using Contentful To Dynamically Change Webpage</p>
+        </section>
+
+        
+
+        
         <section>
           <h2>Additional Resources</h2>
           <ul >

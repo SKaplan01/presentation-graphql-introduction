@@ -26,6 +26,10 @@ img, .logo-image {
   max-height: 95% !important;
 }
 
+.platform-logo{
+  width: 200px;
+}
+
 backquote, .reveal p, .reveal li, #credit {
   font-family: "fira-sans-2"; !important;
   font-weight: 300 !important;
