@@ -77,7 +77,7 @@
 
         <section>
           <h2>Our use case</h2>
-          <h5>The problem...</h5>
+          <h5 style="text-align: left">The problem...</h5>
           <ul>
             <li>A product could sell out suddenly</li>
             <li>External API (Shopify) keeps track of inventory</li>
@@ -114,6 +114,55 @@
             </div>
           </div>
         </section>
+
+        <section>
+          <h2>Our Use Case</h2>
+          <div style="display: flex; flex-direction: row; justify-content: space-between; width: 100%; margin-top: 1em">
+            <div style="width: 48%">
+              <h5>Benefits</h5>
+              <ul>
+                  <li style="margin-bottom: .5em">Build (and query to shopify) only happens when inventory hits 0</li>
+                  <li>Query happens at top level (flexibility to change many components)</li>
+              </ul>
+            </div>
+            <div style="width: 48%">
+                <h5>Issues</h5>
+                <ul>
+                  <li style="margin-bottom: .5em">Lambda fn runs with every purchase ($$$)</li>
+                  <li style="margin-bottom: .5em">Build lag time</li>
+                  <li>Right now, build only changes 1 component</li>
+                </ul>
+            </div>
+          </div>
+        </section>
+
+        <section> 
+            <h2>"Add to Cart" --> Query</h2>
+            <div style="display: flex; flex-direction: row; justify-content: space-between; width: 100%; margin-top: 1em">
+              <div style="width: 48%">
+                <h5>Benefits</h5>
+                <ul>
+                    <li>Less "lag time" to reflect sold out in UI</li>
+                </ul>
+              </div>
+              <div style="width: 48%">
+                  <h5>Issues</h5>                    
+                    <ul>
+                      <li style="margin-bottom: .5em">Lots of queries</li>
+                      <li>Less flexibility (Query happens in a specific component)</li>
+                    </ul>
+              </div>
+            </div>
+          </section>
+  
+
+        <section>
+            <h2>Additional Resources</h2>
+            <ul>
+                <li>https://www.netlify.com/docs/functions/</li>
+                <li>https://help.shopify.com/en/api/reference/events/webhook</li>
+              </ul>
+          </section>
 
 
 <!-- Old slides from Juan and Zac's Presentation -->
