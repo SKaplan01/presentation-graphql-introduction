@@ -1,3 +1,3 @@
-## "Introduction to GraphQL" presentation
+## "Introduction to lambda functions" presentation
 
-[https://arecesj.github.io/presentation-graphql-introduction/](https://arecesj.github.io/presentation-graphql-introduction/)
+[https://skaplan01.github.io/presentation-graphql-introduction/](https://skaplan01.github.io/presentation-graphql-introduction/)
